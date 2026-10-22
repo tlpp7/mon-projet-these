@@ -1,0 +1,16 @@
+# Fichiers de configuration Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Sorties de simulation locally-generated
+output/*.png
+output/*.csv
+
+# Configuration IDE
+.idea/
+.vscode/
+.DS_Store
