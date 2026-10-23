@@ -1,6 +1,11 @@
-MIT License
+# Script de génération automatique du fichier LICENSE (Licence MIT)
+import datetime
 
-Copyright (c) 2026 tlpp7
+annee = datetime.datetime.now().year
+
+license_text = f"""MIT License
+
+Copyright (c) {annee} tlpp7
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +24,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+"""
+
+# Écriture du fichier LICENSE à la racine
+with open("LICENSE", "w", encoding="utf-8") as f:
+    f.write(license_text.strip() + "\n")
+
+print(f"✓ Fichier 'LICENSE' (Licence MIT {annee}) généré avec succès à la racine du projet.")
